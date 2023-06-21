@@ -16,6 +16,17 @@ function M.config()
       right_mouse_command = "Bdelete! %d", -- can be a string | function, see "Mouse actions"
       offsets = { { filetype = "NvimTree", text = "", padding = 1 } },
       separator_style = "thin",            -- | "thick" | "thin" | { 'any', 'any' },
+
+      -- my changes
+      max_name_length = 30,
+      sort_by = 'insert_after_current',
+      -- see https://github.com/akinsho/bufferline.nvim/issues/724
+      show_buffer_close_icons = false,
+	  diagnostics = "nvim_lsp",
+	  diagnostics_update_in_insert = false,
+	  diagnostics_indicator = function(count, level, diagnostics_dict, context)
+		return "(" .. count .. ")"
+	  end,
     },
     highlights = {
       fill = {
