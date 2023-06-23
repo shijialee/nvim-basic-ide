@@ -10,6 +10,8 @@ M.servers = {
   "jsonls",
   "yamlls",
   "intelephense",
+  "tflint",
+  "terraformls",
 }
 
 return M
