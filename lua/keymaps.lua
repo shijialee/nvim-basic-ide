@@ -29,15 +29,14 @@ keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
 keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 
 -- Navigate buffers
-keymap("n", "<S-l>", ":bnext<CR>", opts)
-keymap("n", "<S-h>", ":bprevious<CR>", opts)
+-- keymap("n", "<S-l>", ":bnext<CR>", opts)
+-- keymap("n", "<S-h>", ":bprevious<CR>", opts)
 
 -- Clear highlights
 keymap("n", "<leader>h", "<cmd>nohlsearch<CR>", opts)
 
 -- Close buffers
--- keymap("n", "<S-q>", "<cmd>Bdelete!<CR>", opts)
-keymap("n", "<C-q>", "<cmd>Bdelete!<CR>", opts)
+keymap("n", "<S-q>", "<cmd>Bdelete!<CR>", opts)
 
 -- Better paste
 keymap("v", "p", "P", opts)
@@ -82,3 +81,22 @@ keymap("n", "<leader>dt", "<cmd>lua require'dap'.terminate()<cr>", opts)
 
 -- Lsp
 keymap("n", "<leader>lf", "<cmd>lua vim.lsp.buf.format{ async = true }<cr>", opts)
+
+-------------------------------------------------------------------------------------------------------------------
+-- customization
+--
+
+-- Navigate buffers
+keymap("n", "<c-l>", ":BufferLineCycleNext<CR>", opts)
+keymap("n", "<c-h>", ":BufferLineCyclePrev<CR>", opts)
+keymap("n", "<leader>bi", ":BufferLineTogglePin<CR>", opts)
+keymap("n", "<leader>bp", ":BufferLinePick<CR>", opts)
+keymap("n", "<leader>bmn", ":BufferLineMoveNext<CR>", opts)
+keymap("n", "<leader>bmp", ":BufferLineMovePrev<CR>", opts)
+
+
+-- Close buffers
+keymap("n", "<C-q>", "<cmd>Bdelete!<CR>", opts)
+
+-- ops for splitwindow
+keymap("n", "<C-n>", "<cmd>vsplit<CR>", opts)
