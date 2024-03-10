@@ -12,6 +12,7 @@ M.servers = {
   "intelephense",
   "tflint",
   "terraformls",
+  "tailwindcss",
 }
 
 return M
